@@ -1,0 +1,13 @@
+@for $i from 1 through 5 {
+    .animation__name--#{$i}{
+
+        animation-name: name#{$i};
+        animation-duration: 1s * $i;
+
+        @keyframes maricon#{$i} {
+            100%{
+                transform: translate(100% * $i);
+            }
+        }
+    }
+}

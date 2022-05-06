@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+.header {
+  padding-left: 20px;
+  margin-top: -1.5%;
+}
+.header header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__titulo {
+  font-size: 2em;
+  text-shadow: 3px 3px 3px rgb(122, 87, 122);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.header__titulo:hover {
+  transform: scale(0.96);
+}
+.header__nav {
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  list-style: none;
+}
+.header__nav li {
+  display: inline-block;
+  margin: 40px;
+}
+.header__nav li a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "HeronSansCond";
+  src: url("../fuentes/Font Bureau - HeronSansCond Regular.otf");
+  font-weight: bold;
+}
+:root {
+  --color-fondo: #FFFFFF;
+  --padding-planes: 20px 20px;
+}
+
+body, main {
+  font-family: "HeronSansCond";
+  margin: 0;
+  height: 100vh;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.planes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+
+.plan {
+  background-color: var(--color-fondo);
+  padding: var(--padding-planes);
+  border-radius: 5px;
+  border: 1px solid rgb(173, 162, 162);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  width: 950px;
+  height: 100px;
+  margin-right: 10%;
+  min-width: 500px;
+  max-width: 1000px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.plan:hover {
+  background: linear-gradient(90deg, rgb(255, 245, 254) 0%, rgb(223, 123, 123) 100%, rgb(0, 212, 255) 100%);
+  transform: scale(1.1);
+}
+
+.scroll-down {
+  height: 50px;
+  width: 30px;
+  position: absolute;
+  left: 1%;
+  bottom: 1%;
+  cursor: pointer;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 2px solid rgba(0, 0, 0, 0.274);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::before {
+  animation-delay: 0.3s;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+.scroll {
+  margin-left: 90.5%;
+  margin-top: -6.5%;
+  transform: rotate(-90deg);
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 68%;
+  margin-top: 11%;
+}
+.titulo__div:hover {
+  color: crimson;
+  cursor: pointer;
+}
+.titulo a {
+  text-decoration: none;
+  color: black;
+}
+.titulo a div h1 {
+  font-size: 2em;
+}
+
+#masa-muscular {
+  width: 160px;
+  height: 160px;
+  margin-left: 50%;
+  margin-top: -11%;
+}
+#masa-muscular__imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#perdida {
+  width: 160px;
+  height: 125px;
+  margin-left: 50%;
+  margin-top: -10%;
+}
+#perdida__imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#definicion {
+  width: 150px;
+  height: 155px;
+  margin-left: 51%;
+  margin-top: -11%;
+}
+#definicion__imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*# sourceMappingURL=alimentacion.css.map */

@@ -1,0 +1,17 @@
+@use 'sass:meta';
+@use 'sass:list';
+
+$margen: 10px 20px 40px 30px;
+$color: hsla(228, 7%, 86%, .7);
+
+@debug meta.type-of($color);
+
+$boxshadow: 1px 1px 20px;
+
+.flex{
+    margin-top:list.nth($margen, 1);
+    margin-bottom:list.nth($margen, 2);
+}
+
+
+

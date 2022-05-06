@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "HeronSansCond";
+            src: url("../../../fuentes/Font\ Bureau\ -\ HeronSansCond\ Regular.otf");
+            font-weight: bold;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap');
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+        }
+
+        ul > *{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            font-size: xx-large;
+        }
+
+        img{
+            height: 10%; width: 10%;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul>
+        {{#each resultado}}
+        <li>{{nombre}}</li>
+        <li>{{tipo}}</li>
+        <li>{{cantidad}}</li>
+        <li><img src="{{foto}}" alt="naranjita"></li>
+        {{/each}}
+    </ul>
+
+</body>
+</html>

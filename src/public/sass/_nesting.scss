@@ -1,0 +1,104 @@
+.card{
+    color: teal;
+
+    &--flex{
+        display: flex;
+    }
+
+    &:hover{
+        color: crimson;
+    }
+
+    &::after{
+        content: "";
+    }
+
+    &:not(&){
+        opacity: 0;
+    }
+
+    &__title{
+        text-align: center;
+    }
+
+    &__cta{
+        color: cyan;
+
+        &--green{
+            color: green;
+        }
+    }
+
+}
+
+
+
+.gay{
+    background-color: brown;
+
+    nav{
+        display: flex;
+
+        li{
+            list-style: none;
+    
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.hero, .main{
+    
+    font-size: 2rem;
+
+    .cta{
+        color: aliceblue
+    }
+
+    .title{
+        font-size: large;
+    }
+}
+
+input:checked{
+    + .show{
+        transform: unset;
+    }
+}
+
+.menu{
+
+    > {
+        .close{
+            display: none;
+        }
+
+        .open{
+            display: block;
+        }
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    @media (min-width:500px){
+
+        background-color: white;
+        text-decoration: none;
+        display: flex;
+
+        a{
+            text-decoration: underline;
+        }
+    }
+
+    @keyframes show{
+
+        100%{
+            transform: unset;
+        }
+    }
+}

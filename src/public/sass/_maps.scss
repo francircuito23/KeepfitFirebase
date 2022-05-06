@@ -1,0 +1,22 @@
+$colores:(
+    "primary": crimson,
+    "secundary": white,
+    "buttons": teal
+);
+
+@debug meta.type-of($colores);
+
+
+h1{
+    color: map-get($colores, "primary");
+}
+
+h2{
+    color: map-get($colores, "secundary");
+}
+
+button{
+    color: map-get($colores, "buttons");
+}
+
+

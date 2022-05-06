@@ -1,0 +1,6 @@
+@use 'sass:math';
+
+body{
+    font-size: math.div(25,5) * 1px;
+}
+

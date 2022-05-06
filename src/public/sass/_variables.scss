@@ -1,0 +1,98 @@
+// @use 'variables' with(
+//     $primary: red,
+// );
+
+// $primary: white !default;
+
+// $selector: '.ola';
+// $just-center: 'justify-content';
+// $color: red;
+
+// :root{
+//     --color: $color;
+// }
+
+// body{
+//     color: variables.$primary;
+// }
+
+// #{$selector}{
+//     color: black;
+//     #{$just-center}: center;
+// }
+
+@use 'sass:meta';
+
+$sans: 'Montserrat', sans-serif;
+//arrays de fuentes
+$fuentes:(
+    "heron": "HeronSansCond",
+    "mont": #{$sans}
+);
+
+//variables
+$selector: '.header';
+
+$medidasLogo: 1;
+
+@mixin header($medidasLogo) {
+    @if $medidasLogo == 1{
+        padding-left: 20px;
+        margin-top: -1.5%;
+    }
+    @else{
+        display: $medidasLogo;
+    }
+}
+
+@mixin nav($medidasLogo) {
+    @if $medidasLogo == 1{
+        display: flex;
+        list-style: none;
+
+    }
+    @else{
+        display: $medidasLogo;
+    }
+}
+
+
+#{$selector}{
+
+    @include header(1);
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__titulo{
+        font-size: 2em;
+        text-shadow: 3px 3px 3px rgb(122, 87, 122);
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover{
+            transform: scale(0.96);
+        }
+    }
+
+    &__nav{
+        font-family: map-get($fuentes, "mont");
+        @include nav(1);
+
+        li{
+            display: inline-block;
+            margin: 40px;
+
+            a{
+                text-decoration: none;
+            }
+        }
+        
+    }
+}
+
+
+
